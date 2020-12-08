@@ -101,3 +101,142 @@ public class Course {
 	 public static void main(String[] args) {
 	 }
 	 
+package shiyan2;
+
+public class People {
+	private int id;
+	private String peopleName;
+	private String peopleSex;
+	public People(int id,String peopleName,String peopleSex) {
+		this.id=id;
+		this.peopleName=peopleName;
+		this.peopleSex=peopleSex;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id=id;
+	}
+	public String getPeopleName(){
+		return peopleName;
+	}
+	public void setPeopleName(String peopleName) {
+		this.peopleName=peopleName;
+	}
+	public String getPeopleSex() {
+		return peopleSex;
+	}
+	public void setPeopleSex(String peopleSex) {
+		this.peopleSex=peopleSex;
+	}
+}
+package shiyan2;
+
+public class student {
+	public String id;
+	public String name;
+	public String sex;
+	public String study;
+	public student(String id,String name,String sex,String study)
+	{
+		this.id = id;
+		this.name = name;
+		this.sex = sex;
+		this.study = study;
+	}
+}
+package shiyan2;
+
+public class Teacher {
+	private int teaId;               //定义教师ID号
+	private String teaName;   //教师名称属性
+	private String teaSex;       //教师性别属性
+	private Course[]courses;  //所授课程属性
+	public Teacher() {
+		super();
+		courses=new Course[3];
+	}
+	public Teacher(int teaId,String teaName,String teaSex) {
+		super();
+		this.teaId=teaId;
+		this.teaName=teaName;
+		this.teaSex=teaSex;
+		courses=new Course[3];
+	}
+	public int getTeaId() {
+		return teaId;
+	}
+	public void setTeaId(int teaId) {
+		this.teaId=teaId;
+	}
+	public String getTeaName() {
+		return teaName;
+	}
+	public void setTeaName(String teaName) {
+		this.teaName=teaName;
+	}
+	public String getTeaSex() {
+		return teaSex;
+	}
+	public void setTeaSex(String teaSex) {
+		this.teaSex=teaSex;
+	}
+
+}
+package shiyan2;
+
+public class People {
+	private int id;
+	private String peopleName;
+	private String peopleSex;
+	public People(int id,String peopleName,String peopleSex) {
+		this.id=id;
+		this.peopleName=peopleName;
+		this.peopleSex=peopleSex;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id=id;
+	}
+	public String getPeopleName(){
+		return peopleName;
+	}
+	public void setPeopleName(String peopleName) {
+		this.peopleName=peopleName;
+	}
+	public String getPeopleSex() {
+		return peopleSex;
+	}
+	public void setPeopleSex(String peopleSex) {
+		this.peopleSex=peopleSex;
+	}
+}
+package shiyan2;
+
+public class XuanKeXiTong {
+
+	 public static void main(String[] args) {
+	  Student stu0 = new Student();
+	  Student stu1 = new Student();
+	  Student stu2 = new Student();
+	  Student stu3 = new Student();                                 //创建四个学生类对象
+	  Course cour0 = new Course(001,"大学物理");
+	  Course cour1 = new Course(002,"离散数学");
+	  Course cour2 = new Course(003,"JAVA");                //创建三个课程类对象并赋值
+	  stu0.addCourse(cour0);
+	  stu0.addCourse(cour2);
+	  stu0.addCourse(cour1);
+	  stu1.addCourse(cour2);
+	  stu1.addCourse(cour0);
+	  stu2.addCourse(cour1);
+	  stu3.addCourse(cour0);
+	  stu3.addCourse(cour1);
+	  stu1.removeCourse(cour2);
+	  stu0.displayCourse();
+	  cour0.removeStudent(stu1);
+	  cour1.displayStudent();
+	 }
+}
